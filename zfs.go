@@ -130,7 +130,7 @@ func (z *snapshotter) Stat(ctx context.Context, key string) (snapshots.Info, err
 
 // Usage retrieves the disk usage of the top-level snapshot.
 func (z *snapshotter) Usage(ctx context.Context, key string) (snapshots.Usage, error) {
-	return snapshots.Usage{}, errors.New("zfs does not implement Usage() yet")
+	return snapshots.Usage{}, nil
 }
 
 // Walk the committed snapshots.
